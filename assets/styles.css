@@ -7,12 +7,16 @@
     gap: 10px;
     /* "grid-template-areas" permite definer la cuadrilla como se distribuira en el grid */
     grid-template-areas: 
-    "header"  
-    "nav"
-    "section" 
-    "aside1"
-    "aside2"
-    "footer";
+    "header     header"  
+    "nav        nav"
+    "section    section" 
+    "aside1     aside1"
+    "aside2     aside2"
+    "footer     footer";
+    /* "grid-template-columns" define el ancho de las columnas */
+    grid-template-columns: 100px auto;
+    /* "grid-template-rows" define el alto de las filas */
+    grid-template-rows: 100px 80px auto auto auto 50px;
 }
 /* Estilo para todos los descendientes de '.main' */
 .main > * {
@@ -51,13 +55,27 @@
     grid-area: footer;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 600px) {
     .main {
-        grid-template-areas: 
-        "header header header"  
-        "nav nav nav"
-        "section aside1 aside1" 
-        "section aside2 aside2"
-        "footer footer footer";
+        /* "grid-template" permite definir la cuadrilla y los tamaños como se distribuira en el grid (en la columna fuera de las comillas se asigna el alto de las filas) (despues del '/' se asigna el ancho de las columnas) 
+        En caso de querer dejar un espacio vacío, se debe reemplazar el nombre del elemneto (header) por un '.' */
+        grid-template:
+        "header     header      header"     100px
+        "nav        nav         nav"        auto
+        "section    aside1      aside1"     auto
+        "section    aside2      aside2"     auto
+        "footer     footer      footer"     50px /
+        150px       auto        auto;
+    }
+}
+
+@media (min-width: 900px) {
+    .main {
+        grid-template:
+        "header     header      header"     100px
+        "nav        nav         nav"        auto
+        "section    aside1      aside2"     450px
+        "footer     footer      footer"     50px /
+        150px       auto        auto;
     }
 }
