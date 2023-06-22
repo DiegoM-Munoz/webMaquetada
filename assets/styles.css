@@ -1,0 +1,25 @@
+*{
+    background-color: aqua;
+}
+.header {
+    height: 100px;
+}
+.nav {
+    height: 50px;
+}
+.section {
+    width: 60%;
+    float: left;
+}
+.aside1 {
+    width: 30%;
+    float: right;
+}
+.aside2 {
+    width: 30%;
+    float: right;
+}
+.footer {
+    height: 50px;
+    clear: both;
+}
