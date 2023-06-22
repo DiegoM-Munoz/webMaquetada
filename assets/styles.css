@@ -1,25 +1,63 @@
 *{
-    background-color: aqua;
+    background-color: whitesmoke;
+}
+.main {
+    border: solid 1px;
+    display: grid;
+    gap: 10px;
+    /* "grid-template-areas" permite definer la cuadrilla como se distribuira en el grid */
+    grid-template-areas: 
+    "header"  
+    "nav"
+    "section" 
+    "aside1"
+    "aside2"
+    "footer";
+}
+/* Estilo para todos los descendientes de '.main' */
+.main > * {
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border: solid 1px;
 }
 .header {
-    height: 100px;
+    background-color: aquamarine;
+    height: auto;
+    grid-area: header;
 }
 .nav {
-    height: 50px;
+    background-color: aqua;
+    height: auto;
+    grid-area: nav;
 }
 .section {
-    width: 60%;
-    float: left;
+    background-color: pink;
+    width: auto;
+    grid-area: section;
 }
 .aside1 {
-    width: 30%;
-    float: right;
+    background-color: orchid;
+    width: auto;
+    grid-area: aside1;
 }
 .aside2 {
-    width: 30%;
-    float: right;
+    background-color: paleturquoise;
+    width: auto;
+    grid-area: aside2;
 }
 .footer {
-    height: 50px;
+    background-color: rosybrown;
+    height: auto;
     clear: both;
+    grid-area: footer;
+}
+
+@media (max-width: 800px) {
+    .main {
+        grid-template-areas: 
+        "header header header"  
+        "nav nav nav"
+        "section aside1 aside1" 
+        "section aside2 aside2"
+        "footer footer footer";
+    }
 }
