@@ -1,8 +1,7 @@
 *{
-    background-color: whitesmoke;
+    font-family: 'Rubik', sans-serif;
 }
 .main {
-    border: solid 1px;
     display: grid;
     gap: 10px;
     /* "grid-template-areas" permite definer la cuadrilla como se distribuira en el grid */
@@ -23,32 +22,65 @@
     box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
     border: solid 1px;
 }
-.header {
+#header {
     background-color: aquamarine;
     height: auto;
     grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.nav {
+#nav {
     background-color: aqua;
     height: auto;
     grid-area: nav;
 }
-.section {
+#section {
     background-color: pink;
     width: auto;
     grid-area: section;
+    text-justify: auto;
+    text-align: justify;
 }
-.aside1 {
+#section h2{
+    background-color: pink;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#aside1 {
     background-color: orchid;
     width: auto;
     grid-area: aside1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.aside2 {
+#aside1 h3 {
+    background-color: orchid;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#aside2 {
     background-color: paleturquoise;
     width: auto;
     grid-area: aside2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.footer {
+#aside2 h3 {
+    background-color: paleturquoise;
+    width: auto;
+    grid-area: aside1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer {
     background-color: rosybrown;
     height: auto;
     clear: both;
