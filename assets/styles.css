@@ -82,9 +82,12 @@
 }
 #footer {
     background-color: rosybrown;
+    width: auto;
     height: auto;
     clear: both;
     grid-area: footer;
+    display: flex;
+    flex-direction: column;
 }
 
 @media (min-width: 600px) {
@@ -96,8 +99,11 @@
         "nav        nav         nav"        auto
         "section    aside1      aside1"     auto
         "section    aside2      aside2"     auto
-        "footer     footer      footer"     50px /
+        "footer     footer      footer"     auto /
         150px       auto        auto;
+    }
+    #footer > *{
+        margin: 1px;
     }
 }
 
@@ -107,7 +113,10 @@
         "header     header      header"     100px
         "nav        nav         nav"        auto
         "section    aside1      aside2"     450px
-        "footer     footer      footer"     50px /
+        "footer     footer      footer"     auto /
         150px       auto        auto;
+    }
+    #footer > *{
+        margin: 1px;
     }
 }
