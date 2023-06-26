@@ -15,7 +15,7 @@
     /* "grid-template-columns" define el ancho de las columnas */
     grid-template-columns: 100px auto;
     /* "grid-template-rows" define el alto de las filas */
-    grid-template-rows: 100px 80px auto auto auto 50px;
+    grid-template-rows: 100px auto auto auto auto auto;
 }
 /* Estilo para todos los descendientes de '.main' */
 .main > * {
@@ -33,6 +33,7 @@
 #nav {
     background-color: aqua;
     height: auto;
+    width: auto;
     grid-area: nav;
 }
 #section {
@@ -88,6 +89,12 @@
     grid-area: footer;
     display: flex;
     flex-direction: column;
+    margin: 1px;
+    padding-top: 1px;
+}
+#footer > * {
+    margin: 1px;
+    padding-top: 1px;
 }
 
 @media (min-width: 600px) {
