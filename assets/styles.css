@@ -4,7 +4,7 @@
 .main {
     display: grid;
     gap: 10px;
-    /* "grid-template-areas" permite definer la cuadrilla como se distribuira en el grid */
+    /* "grid-template-areas" permite definir la cuadrilla como se distribuira en el grid (Se debe asignar el nombre a cada elemento de la cuadrilla por medio de 'grid-area:') */
     grid-template-areas: 
     "header     header"  
     "nav        nav"
@@ -25,6 +25,7 @@
 #header {
     background-color: aquamarine;
     height: auto;
+    /* con 'grid-area:' se asigna el nombre (y la posición) que va a ocupar el elemento dentro de la cuadrilla (grid) */
     grid-area: header;
     display: flex;
     align-items: center;
